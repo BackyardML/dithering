@@ -3,7 +3,7 @@ name = "dithering"
 version = "0.1.17"
 edition = "2021"
 authors = ["Patrik Larsson <patrik@backyardml.se>"]
-
+homepage = "https://github.com/BackyardML/dithering/"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [lib]
 name = "dithering"
