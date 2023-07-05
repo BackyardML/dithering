@@ -1,7 +1,17 @@
 [package]
 name = "dithering"
-version = "0.1.13"
+version = "0.1.15"
 edition = "2021"
+authors = ["Patrik Larsson <patrik@backyardml.se>"]
+homepage = "https://backyardml.github.io/"
+repository = "https://github.com/BackyardML/dithering"
+license = "MIT"
+keywords = ["dither", "dithering", "image processing", "rust"]
+readme = "./README.md"
+description = """
+Provides an implementation of various image dithering methods,
+with a focus on performances and versatility.
+"""
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [lib]
