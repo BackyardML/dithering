@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='dithering',
-    version='0.1.13',
+    version='0.1.15',
     description='Efficient Rust implementation of various image dithering methods to be used in Python',
     url='https://github.com/BackyardML/dithering',
     author='Patrik Larsson',
