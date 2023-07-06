@@ -1,10 +1,11 @@
 <p align="center">
     <br>
-    <img src="https://github.com/BackyardML/dithering/blob/main/resources/dithering.png?raw=true" width="600"/>
+    <img src="https://raw.githubusercontent.com/BackyardML/dithering/72ea732b8c7372af6f427a5f8244af158d80d208/resources/dithering.svg" width="600"/>
     <br>
 <p>
 
 ![CI](https://github.com/BackyardML/dithering/actions/workflows/CI.yml/badge.svg)
+
 
 ## Overview
 Welcome to Dithering, a project that brings efficient Rust implementation of various image dithering methods to be used in Python!
