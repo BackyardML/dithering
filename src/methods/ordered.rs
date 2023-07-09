@@ -1,11 +1,12 @@
 use pyo3::prelude::*;
+use numpy::{PyArray2};
 
 #[pyfunction]
 pub fn ordered_dither<'py>(
-    _py: Python<'py>,
+    py: Python<'py>,
     image: Vec<Vec<u8>>,
     matrix: Vec<Vec<u8>>,
-) -> Vec<Vec<u8>> {
+) -> PyResult<&'py PyArray2<u8>> {
 
     let img_height = image.len();
     let img_width = image[0].len();
@@ -18,18 +19,22 @@ pub fn ordered_dither<'py>(
     (0..img_height).for_each(|y| {
         let mut row: Vec<u8> = Vec::with_capacity(img_width);
         (0..img_width).for_each(|x| {
-            let old_pixel = image[y][x]; // Fix the order of indices
-            let d_val = matrix[y % dither_height][x % dither_width]; // Fix the order of indices
+            let old_pixel = image[y][x];
+            let d_val = matrix[y % dither_height][x % dither_width];
             row.push(if old_pixel < d_val { 0 } else { 255 });
         });
         result.push(row);
     });
+    let d = PyArray2::from_vec2(py, &result).unwrap();
 
-    result
+    Ok(d)
 }
 
 #[cfg(test)]
 mod tests {
+
+    use numpy::array;
+
     use super::*;
 
     #[test]
@@ -48,17 +53,17 @@ mod tests {
         ];
 
         // Expected output
-        let expected_result = vec![
-            vec![255, 255, 255],
-            vec![0, 0, 255],
-            vec![255, 255, 0],
+        let expected_result = array![
+            [255, 255, 255],
+            [0, 0, 255],
+            [255, 255, 0],
         ];
 
         // Call the function
-        let result = ordered_dither(py, image, matrix);
+        let result = ordered_dither(py, image, matrix).unwrap();
         
         // Assert the result
-        assert_eq!(result, expected_result);
+        assert_eq!(&result.readonly().as_array(), expected_result);
         });
         
     }
