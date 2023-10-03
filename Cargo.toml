@@ -1,12 +1,12 @@
 [package]
 name = "dithering"
-version = "0.1.23"
+version = "0.1.24"
 edition = "2021"
 authors = ["Patrik Larsson <patrik@backyardml.se>"]
 homepage = "https://backyardml.github.io/"
 repository = "https://github.com/BackyardML/dithering"
 description = "Efficient implementations of various image dithering methods."
-
+keywords = ["image processing", "dithering", "rust"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [lib]
@@ -16,3 +16,5 @@ crate-type = ["cdylib"]
 [dependencies]
 numpy = "0.19.0"
 pyo3 = "0.19.0"
+strum = "0.25.0"
+strum_macros = "0.25.1"
