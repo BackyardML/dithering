@@ -1,6 +1,6 @@
 [package]
 name = "dithering"
-version = "0.1.18"
+version = "0.1.19"
 edition = "2021"
 authors = ["Patrik Larsson <patrik@backyardml.se>"]
 homepage = "https://backyardml.github.io/"
