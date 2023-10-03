@@ -29,7 +29,7 @@ fn ordered_dither<'py>(
 }
 
 #[pymodule]
-fn dither_rs(_py: Python<'_>, m: &PyModule) -> PyResult<()> {
+fn dithering(_py: Python<'_>, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(ordered_dither, m)?)?;
     Ok(())
 }
