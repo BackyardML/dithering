@@ -1,13 +1,20 @@
-## Dithering 
-### Overview
+<p align="center">
+    <br>
+    <img src="resources/dithering.svg" width="600"/>
+    <br>
+<p>
+
+![CI](https://github.com/BackyardML/dithering/actions/workflows/CI.yml/badge.svg)
+
+## Overview
 Welcome to Dithering, a project that brings efficient Rust implementation of various image dithering methods to be used in Python!
 
-### Installation
+## Installation
 ```
 pip install dithering
 ```
 
-### Usage
+## Usage
 ```python
 from PIL import Image
 from dithering import ordered_dither
