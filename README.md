@@ -36,7 +36,7 @@ output_image = ordered_dither(input_image, "Bayer2x2")
 
 | Original               | Dithered               |
 | ---------------------- | ---------------------- |
-| ![original](https://github.com/BackyardML/dithering/blob/main/resources/original.png) | ![dithered](https://github.com/BackyardML/dithering/blob/main/resources/dithered.png) |
+| ![original](https://github.com/BackyardML/dithering/blob/main/resources/original.png?raw=true) | ![dithered](https://github.com/BackyardML/dithering/blob/main/resources/dithered.png?raw=true) |
 
 In the example above, we first import the necessary modules. Then, we load an image using the PIL library and convert it to a NumPy array. We pick a dither matrix ("`Dither2x2`") and pass it along with the input image to the `ordered_dither` function from the `dithering` module. The function returns the dithered output image as a NumPy array.
 
