@@ -1,6 +1,6 @@
 <p align="center">
     <br>
-    <img src="resources/dithering.svg" width="600"/>
+    <img src="https://github.com/BackyardML/dithering/blob/main/resources/dithering.png?raw=true" width="600"/>
     <br>
 <p>
 
