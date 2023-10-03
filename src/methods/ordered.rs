@@ -1,5 +1,5 @@
 use pyo3::prelude::*;
-use numpy::{PyArray2};
+use numpy::PyArray2;
 
 #[pyfunction]
 pub fn ordered_dither<'py>(
